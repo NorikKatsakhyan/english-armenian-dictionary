@@ -5,7 +5,6 @@ This is a static, searchable English–Armenian dictionary website made from the
 ## Files
 - `index.html` — website page
 - `styles.css` — design and responsive layout
-- `app.js` — search and browser speech playback
 - `dictionary.json` — 10,809 dictionary entries
 
 ## Run locally
@@ -22,7 +21,6 @@ Open `index.html` in a modern browser. For best results, serve this folder throu
 
 ## Notes
 - The workbook contains English headwords, Armenian-script pronunciation guides, and Armenian definitions. The website displays all three.
-- The speaker button uses the visitor's browser speech synthesis to say the English headword. It is not an original recording and pronunciation/voice quality depends on the visitor's device and installed voices.
 - The pronunciation guide in the workbook is displayed as text.
 - The source workbook credits Norik Katsakhyan. Before publishing the dictionary publicly, make sure you have permission to publish and distribute its contents.
 - This is a static site: visitors do not need accounts and there is no server/database bill. To update entries, replace `dictionary.json` with a newly exported JSON file using the same fields (`word`, `pronunciation`, `definition`).

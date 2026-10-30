@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Search an English–Armenian dictionary with more than 10,000 entries.">
+  <title>English–Armenian Dictionary</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Dictionary home"><span class="brand-mark">Ա</span><span>English–Armenian <b>Dictionary</b></span></a>
+    <span class="count" id="entry-count">Loading dictionary…</span>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="eyebrow">A WORD AT A TIME</div>
+      <h1>Find the right <em>word.</em></h1>
+      <p class="subtitle">Look up English words, pronunciation, and Armenian meanings.</p>
+      <form id="search-form" class="search-form" role="search">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="search" type="search" placeholder="Search an English word…" autocomplete="off" autofocus aria-label="Search dictionary">
+        <button type="button" id="clear" class="clear" aria-label="Clear search">×</button>
+        <button type="submit" class="search-button">Search</button>
+      </form>
+      <div class="search-hint">Try a word like <button class="example" data-word="hello">hello</button>, <button class="example" data-word="love">love</button>, or <button class="example" data-word="serendipity">serendipity</button>.</div>
+    </section>
+
+    <section class="content">
+      <div class="results-head">
+        <div><h2 id="results-title">Dictionary entries</h2><p id="results-subtitle">Start typing to search the dictionary.</p></div>
+        <label class="sort-label">Sort
+          <select id="sort">
+            <option value="relevance">Best match</option>
+            <option value="az">A–Z</option>
+          </select>
+        </label>
+      </div>
+      <div id="results" class="results" aria-live="polite">
+        <div class="empty-state"><div class="empty-icon">⌕</div><strong>Your next word is waiting.</strong><span>Search above to explore the dictionary.</span></div>
+      </div>
+      <div class="pagination"><button id="load-more" class="load-more" hidden>Show more results</button></div>
+    </section>
+  </main>
+  <footer>
+    <div><b>English–Armenian Dictionary</b><span>Dictionary data supplied in the uploaded workbook.</span></div>
+    <span class="footer-note">Pronunciation audio uses your browser’s speech feature.</span>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

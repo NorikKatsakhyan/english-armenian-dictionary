@@ -48,9 +48,7 @@ function render(){
    const left=document.createElement("div");
    const h=document.createElement("h3");h.className="word";h.textContent=e.word;left.appendChild(h);
    if(e.pronunciation){const p=document.createElement("p");p.className="pronunciation";p.textContent=`Pronunciation: ${e.pronunciation}`;left.appendChild(p);}
-   const speak=document.createElement("button");speak.className="speak";speak.type="button";speak.title=`Hear ${e.word}`;speak.setAttribute("aria-label",`Hear pronunciation of ${e.word}`);speak.textContent="🔊";
-   speak.addEventListener("click",()=>{if(!("speechSynthesis" in window)){alert("Speech playback is not supported in this browser.");return;}speechSynthesis.cancel();const utterance=new SpeechSynthesisUtterance(e.word);utterance.lang="en-US";speechSynthesis.speak(utterance);});
-   top.append(left,speak);card.appendChild(top);
+   top.appendChild(left);card.appendChild(top);
    const def=document.createElement("p");def.className="definition";def.textContent=e.definition;card.appendChild(def);
    frag.appendChild(card);
  });
